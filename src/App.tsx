@@ -1,6 +1,12 @@
 import { ThemeProvider } from "@emotion/react";
 import { createTheme } from "@mui/material/styles";
 import React from "react";
+import { Route, BrowserRouter as Router, useRoutes } from "react-router-dom";
+import Layout from "./layout";
+import Home from "./Home";
+import Cats from "./cats";
+import Locations from "./locations";
+import Menu from "./menu";
 
 let theme = createTheme({
   palette: {
@@ -29,14 +35,30 @@ theme.typography.h2 = {
   fontWeight: 300,
 };
 
-const App: React.FC = () => {
+const App = () => {
+  let routes = useRoutes([
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        { index: true, element: <Home /> },
+        { path: "/cats", element: <Cats /> },
+        { path: "/locations", element: <Locations /> },
+        { path: "/menu", element: <Menu /> },
+      ],
+    },
+  ]);
+  return routes;
+};
+
+const AppWrapper: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
-      <div>
-        <h1>APP SETUP</h1>
-      </div>
+      <Router>
+        <App />
+      </Router>
     </ThemeProvider>
   );
 };
 
-export default App;
+export default AppWrapper;
