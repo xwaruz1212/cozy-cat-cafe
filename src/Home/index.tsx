@@ -4,26 +4,24 @@ import React from "react";
 const Home: React.FC = () => {
   return (
     <>
-      <Container
+      <Box
         sx={{
-          backgroundColor: "secondary",
+          bgColor: "secondary",
           display: "flex",
           flexDirection: "column",
-          height: "100%",
-          width: "100vw",
-          position: "relative",
-          marginLeft: "-41px",
+          height: "600px",
+          width: "100%",
         }}
       >
         <img
           src="https://via.placeholder.com/600/771796"
-          style={{ maxHeight: "500px", width: "100vw" }}
+          style={{ maxHeight: "600px", width: "100%" }}
         />
-      </Container>
+      </Box>
       <Container
         maxWidth="xl"
         sx={{
-          backgroundColor: "secondary.main",
+          bgColor: "secondary.main",
           display: "flex",
           flexDirection: "column",
           height: "100%",
@@ -33,7 +31,7 @@ const Home: React.FC = () => {
       >
         <Box
           sx={{
-            backgroundColor: "secondary",
+            bgColor: "secondary",
             display: "flex",
             flexDirection: "column",
             maxHeight: "700px",
