@@ -26,13 +26,17 @@ let theme = createTheme({
 });
 
 theme.typography.h1 = {
-  fontSize: 50,
-  fontWeight: 500,
+  fontSize: 40,
+  fontWeight: 800,
 };
 
 theme.typography.h2 = {
   fontSize: 30,
-  fontWeight: 300,
+  fontWeight: 500,
+};
+theme.typography.h4 = {
+  fontSize: 20,
+  fontWeight: 400,
 };
 
 const App = () => {
