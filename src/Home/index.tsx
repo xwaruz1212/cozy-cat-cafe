@@ -14,7 +14,7 @@ const Home: React.FC = () => {
         }}
       >
         <img
-          src="https://via.placeholder.com/600/771796"
+          src={require('../assets/baner.png')}
           style={{ maxHeight: "600px", width: "100%" }}
         />
       </Box>
