@@ -50,7 +50,10 @@ function Navbar() {
               position: "absolute",
             }}
           >
-            LOGO
+          <img
+          src={require('../assets/logo.png')}
+          style={{ maxHeight: "50px", width: "100%" }}
+        />
           </Typography>
           <Box
             sx={{
