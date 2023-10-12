@@ -6,7 +6,7 @@ const Home: React.FC = () => {
     <>
       <Box
         sx={{
-          bgColor: "secondary",
+          bgColor: "secondary.main",
           display: "flex",
           flexDirection: "column",
           height: "600px",
@@ -14,7 +14,7 @@ const Home: React.FC = () => {
         }}
       >
         <img
-          src={require('../assets/baner.png')}
+          src={require("../assets/baner.png")}
           style={{ maxHeight: "600px", width: "100%" }}
         />
       </Box>
@@ -31,7 +31,7 @@ const Home: React.FC = () => {
       >
         <Box
           sx={{
-            bgColor: "secondary",
+            bgColor: "secondary.main",
             display: "flex",
             flexDirection: "column",
             maxHeight: "700px",
