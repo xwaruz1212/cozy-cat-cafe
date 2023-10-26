@@ -17,15 +17,16 @@ const Cats: React.FC = () => {
      }}>
       <Box
       sx={{
-        width: "50%",
+        width: "100%",
         left: "32px",
         paddingTop: "100px",
         paddingBottom: "100px",
         display: "flex",
-        flexDirection: "column",
-        maxHeight: "700px",
-        maxWidth: "700px",
-        position: "relative"
+        flexDirection: "row",
+        height: "100%",
+        
+        
+        
       }}>
         <Typography variant="h1">We love cats</Typography>
           <br />
@@ -35,22 +36,11 @@ const Cats: React.FC = () => {
             officiis nesciunt officia fugit magni consequuntur vero adipisci
             expedita, ratione pariatur accusamus et vitae!
           </Typography>
-          </Box>
-          <Box
-           sx={{
-            width: "50%",
-            left: "650px",
-            paddingTop: "100px",
-            paddingBottom: "100px",
-            display: "flex",
-            flexDirection: "column",
-            maxHeight: "500px",
-            maxWidth: "500px",
-            position: "fixed"
-          }}
-          >
+          
             <img
               src={require('../assets/menu/chef_cat.jpg')}
+              style={{maxHeight: "400px", width: "600px"}}
+              
             />
              
           </Box>
