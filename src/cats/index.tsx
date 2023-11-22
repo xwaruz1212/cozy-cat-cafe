@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Container, Typography, useTheme } from "@mui/material";
 import { catItems } from "./catItems";
-
+ 
 const Cats: React.FC = () => {
   return(
   <>
@@ -87,8 +87,8 @@ const Cats: React.FC = () => {
               }}
             >
               <img
-                srcSet={require("../assets/menu/" + catItem.img)}
-                src={require("../assets/menu/" + catItem.img)}
+                srcSet={require("../assets/cats/" + catItem.img)}
+                src={require("../assets/cats/" + catItem.img)}
                 alt={catItem.name}
                 loading="lazy"
                 style={{

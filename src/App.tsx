@@ -12,7 +12,7 @@ let theme = createTheme({
   palette: {
     primary: {
       main: "#ceb995",
-      contrastText: "#fff",
+      contrastText: "#eaeaea",
     },
     secondary: {
       main: "#f6e6bf",
