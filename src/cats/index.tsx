@@ -1,54 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Container, Typography, useTheme } from "@mui/material";
 import { catItems } from "./catItems";
+import { motion, AnimatePresence } from "framer-motion"
+import StartComponent from "./StartComponent";
  
 const Cats: React.FC = () => {
+  const [isVisible] = useState(true)
   return(
   <>
-    <Container
-     maxWidth="xl"
-     sx={{
-       backgroundColor: "#f6e6bf",
-       display: "flex",
-       flexDirection: "row",
-       height: "90vh",
-       width: "100%",
-       position: "relative",
-       alignItems: "center",
-       alignContent: "center",
-     }}>
-      
-          
-      <Box
-      sx={{
-        width: "50%",
-        paddingTop: "32px",
-        paddingBottom: "100px",
-        paddingRight: "32px",
-        display: "flex",
-        flexDirection: "column",
-        position: "relative"
-      }}>
-         <Typography variant="h1">We love cats</Typography>
-          
-          <Typography variant="h4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-            perspiciatis ipsa temporibus voluptatem nihil, eligendi voluptatum
-            officiis nesciunt officia fugit magni consequuntur vero adipisci
-            expedita, ratione pariatur accusamus et vitae!
-          </Typography>
-         
-          
-          
-          
-          
-          </Box>
-          <img 
-              src={require('../assets/menu/chef_cat.jpg')}
-              style={{maxHeight: "400px", width: "50%"}}
+    
+    <AnimatePresence>
+    
+    {isVisible && (
+     
+      <motion.div
+       
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+      > <StartComponent /> 
+      </motion.div>
+    )}
+  </AnimatePresence>
 
-            />
-    </Container>
+    
+    
+   
     <Container
      maxWidth="xl"
      disableGutters={true}
@@ -68,7 +45,7 @@ const Cats: React.FC = () => {
      <Box
         sx={{
           display: "grid", 
-          gridTemplateColumns: "1fr 1fr",
+          gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr", md: "1fr 1fr 1fr", lg: "1fr 1fr"},
           flexDirection: "column",
           alignItems: "center",
           alignContent: "center",
@@ -78,12 +55,17 @@ const Cats: React.FC = () => {
             <Box
              sx={{
                display: "flex",
-               flexDirection: "row",
+               flexDirection: {xs: "column",md: "column", lg:"row"},
                alignItems: "center",
                alignContent: "center",
                marginTop: "20px",
                marginBottom: "20px",
                gap: "30px",
+
+               "& img": {
+                width: {xs: "20vh", sm:"30vh",md: "40vh"},
+                height: {xs: "7,5vw", sm:"12vw", md: "15vw"}
+               }
               }}
             >
               <img
@@ -91,16 +73,11 @@ const Cats: React.FC = () => {
                 src={require("../assets/cats/" + catItem.img)}
                 alt={catItem.name}
                 loading="lazy"
-                style={{
-                height: "40vh",
-                width: "15vw",
-               
                 
-                }}
               />
               <Box
                sx={{
-                  width: "15vw",
+                  width: {xs: "50%" , md: "20vw", lg: "15vw"},
                   cursor: "default",
                 }}
               >
