@@ -5,14 +5,14 @@ import { Route, BrowserRouter as Router, useRoutes } from "react-router-dom";
 import Layout from "./layout";
 import Home from "./Home";
 import Cats from "./cats";
-import Locations from "./locations";
+import LocationsComponent from "./locations";
 import Menu from "./menu";
 
 let theme = createTheme({
   palette: {
     primary: {
       main: "#ceb995",
-      contrastText: "#fff",
+      contrastText: "#eaeaea",
     },
     secondary: {
       main: "#f6e6bf",
@@ -47,7 +47,7 @@ const App = () => {
       children: [
         { index: true, element: <Home /> },
         { path: "/cats", element: <Cats /> },
-        { path: "/locations", element: <Locations /> },
+        { path: "/locations", element: <LocationsComponent /> },
         { path: "/menu", element: <Menu /> },
       ],
     },
