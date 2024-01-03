@@ -5,7 +5,7 @@ import { Route, BrowserRouter as Router, useRoutes } from "react-router-dom";
 import Layout from "./layout";
 import Home from "./Home";
 import Cats from "./cats";
-import Locations from "./locations";
+import LocationsComponent from "./locations";
 import Menu from "./menu";
 
 let theme = createTheme({
@@ -47,7 +47,7 @@ const App = () => {
       children: [
         { index: true, element: <Home /> },
         { path: "/cats", element: <Cats /> },
-        { path: "/locations", element: <Locations /> },
+        { path: "/locations", element: <LocationsComponent /> },
         { path: "/menu", element: <Menu /> },
       ],
     },

@@ -19,7 +19,7 @@ const Home: React.FC = () => {
         />
       </Box>
       <Container
-        maxWidth="xl"
+       maxWidth="xl"
         sx={{
           bgColor: "secondary.main",
           display: "flex",
